@@ -1,0 +1,53 @@
+import { useState } from 'react'
+
+import map from 'lodash/map'
+
+import { LEXICS } from '../../config'
+import {
+  DEFAULT_NAME,
+  SELECT_OPTIONS,
+} from './config'
+
+import css from './Select.module.css'
+
+type TSelect = {
+  onChange: (value: string) => void,
+}
+
+export const Select = (
+  {
+    onChange,
+  }: TSelect) => {
+  const [sortValue, setSortValue] = useState('')
+
+  const { sortingLexic } = LEXICS
+
+  const optionsArr = Object.keys(SELECT_OPTIONS)
+
+  return (
+    <div className={css.selectContainer}>
+      <div>
+        {sortingLexic}
+      </div>
+      <select
+        value={sortValue}
+        onChange={(e) => {
+          onChange(e.target.value)
+          setSortValue(e.target.value)
+        }}
+      >
+        <option disabled value="">
+          {DEFAULT_NAME}
+        </option>
+        {map(
+          optionsArr,
+          (option) => {
+            return (
+              <option key={option} value={option}>
+                {SELECT_OPTIONS[option as keyof typeof SELECT_OPTIONS]}
+              </option>)
+          })}
+      </select>
+    </div>
+  );
+};

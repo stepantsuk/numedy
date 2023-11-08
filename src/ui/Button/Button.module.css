@@ -1,0 +1,66 @@
+.buttonContainer {
+  flex: 1;
+  display: flex;
+}
+
+.button {
+  position: relative;
+  padding: 10px 16px;
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  align-items: center;
+  white-space: nowrap;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: #4086b8;
+  border: 2px solid #adb0b2;
+}
+
+.button:hover {
+  background-color: #0d5385;
+  color: #ffffff;
+}
+
+.button:active {
+  background-color: #093859;
+  color: #ffffff;
+}
+
+.buttonDisabled {
+  border: 2px solid #adb0b2;
+
+  color: #adb0b2;
+  background-color: #ebeef0;
+  pointer-events: none;
+}
+
+.buttonYes {
+  border: 2px solid #008600;
+  background-color: #bfecbf;
+}
+
+.buttonYes:hover {
+  background-color: #40c540;
+  color: #ffffff;
+}
+
+.buttonYes:active {
+  background-color: #008600;
+  color: #ffffff;
+}
+
+.buttonNo {
+  border: 2px solid #b20000;
+  background-color: #f9bfbf;
+}
+
+.buttonNo:hover {
+  background-color: #f24949;
+  color: #ffffff;
+}
+
+.buttonNo:active {
+  background-color: #b20000;
+  color: #ffffff;
+}

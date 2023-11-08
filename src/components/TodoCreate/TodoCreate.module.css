@@ -1,0 +1,69 @@
+.todoItem {
+  margin-top: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 2px solid #adb0b2;
+  background-color: #f7f9fa;
+}
+
+.todoColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 10px 16px;
+  border-bottom: 1px solid #adb0b2;
+}
+
+.todoRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5%;
+  padding: 10px 16px;
+  border-bottom: 1px solid #adb0b2;
+}
+
+.todoTitle {
+  font-weight: 600;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.todoInput {
+  min-height: 22px;
+  padding: 0 5px;
+  border: 1px solid #adb0b2;
+}
+
+.todoInputDescription {
+  margin: 0;
+  height: 132px;
+  resize: none;
+
+  &::-webkit-scrollbar {
+    position: relative;
+    width: 8px;
+    height: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #cdd1d4;
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #f7f9fa;
+    border-radius: 10px;
+  }
+}
+
+.todoInput:hover {
+  border: 1px solid #313233;
+}
+
+.todoInput:focus {
+  border: 1px solid #313233;
+}

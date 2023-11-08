@@ -1,0 +1,75 @@
+.todoItem {
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 2px solid #adb0b2;
+  background-color: #f7f9fa;
+}
+
+.todoRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5%;
+  padding: 10px 16px;
+  border-bottom: 1px solid #adb0b2;
+}
+
+.todoColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 10px 16px;
+  border-bottom: 1px solid #adb0b2;
+}
+
+.todoTitle {
+  font-weight: 600;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  flex: 1;
+}
+
+.todoCheckbox {
+  margin: 0;
+  width: 25px;
+  height: 25px;
+  outline: none;
+}
+
+.todoDate {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.dateTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  border-bottom: 1px solid #adb0b2;
+}
+
+.dateValue {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todoDescription {
+  cursor: text;
+  padding: 6px 6px;
+  border: 1px solid #adb0b2;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.buttonFrame {
+  display: flex;
+  padding: 0px 16px;
+}

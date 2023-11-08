@@ -1,0 +1,7 @@
+.selectContainer {
+  padding: 10px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #adb0b2;
+}
