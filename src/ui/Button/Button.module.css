@@ -13,18 +13,17 @@
   white-space: nowrap;
   font-weight: 600;
   cursor: pointer;
-  background-color: #4086b8;
+  background-color: #1b6396;
   border: 2px solid #adb0b2;
+  color: #ffffff;
 }
 
 .button:hover {
   background-color: #0d5385;
-  color: #ffffff;
 }
 
 .button:active {
   background-color: #093859;
-  color: #ffffff;
 }
 
 .buttonDisabled {
@@ -38,6 +37,7 @@
 .buttonYes {
   border: 2px solid #008600;
   background-color: #bfecbf;
+  color: #313233;
 }
 
 .buttonYes:hover {
@@ -53,6 +53,7 @@
 .buttonNo {
   border: 2px solid #b20000;
   background-color: #f9bfbf;
+  color: #313233;
 }
 
 .buttonNo:hover {

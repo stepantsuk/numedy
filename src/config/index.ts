@@ -20,3 +20,7 @@ export enum KEYBOARD_KEYS {
   enter = 'Enter',
   escape = 'Escape',
 }
+
+export enum PAGES {
+  edit = 'edit',
+}

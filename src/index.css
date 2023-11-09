@@ -74,6 +74,5 @@ option {
 }
 
 #root {
-  display: flex;
-  min-height: 100%;
+  box-sizing: border-box;
 }

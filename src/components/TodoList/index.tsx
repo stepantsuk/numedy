@@ -13,17 +13,19 @@ export const TodoList = () => {
       {map(
         todos,
         ({
+          id,
           dateEnd,
           dateStart,
           description,
           title,
-        }, index) => (
+        }) => (
           <TodoItem
+            id={id}
             dateEnd={dateEnd}
             dateStart={dateStart}
             description={description}
             title={title}
-            key={index}
+            key={id}
           />
         )
       )}

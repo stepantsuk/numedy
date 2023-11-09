@@ -1,12 +1,17 @@
+import { Suspense } from 'react'
+
 import css from './App.module.css'
-import { MainPage } from '../../pages/MainPage'
-import { EditPage } from '../../pages/EditPage'
 import { Footer } from '../../ui/Footer'
+import { Loader } from '../../ui/Loader'
+import { AppRoutes } from './AppRoutes'
 
 export const App = () => (
   <div className={css.wrapper}>
-    <MainPage />
-    <EditPage />
+    <div className={css.container}>
+      <Suspense fallback={<Loader />}>
+        <AppRoutes />
+      </Suspense>
+    </div>
     <Footer />
   </div>
 )

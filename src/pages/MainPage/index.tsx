@@ -1,4 +1,7 @@
+import { Link } from 'react-router-dom'
+
 import { BUTTON_TYPE } from '../../ui/Button/config'
+import { PAGES } from '../../config'
 import { Container } from '../../ui/Container'
 import { Button } from '../../ui/Button'
 import { Select } from '../../ui/Select'
@@ -8,13 +11,16 @@ import { Pagination } from '../../components/Pagination'
 
 import css from './MainPage.module.css'
 
-export const MainPage = () => {
+const MainPage = () => {
   const selectFn = (str: string) => console.log('selectFn =>', str)
 
   return (
     <Container>
       <div className={css.containerColumn}>
-        <Button buttonType={BUTTON_TYPE.addTask} />
+        <Link to={`${PAGES.edit}`}>
+          <Button buttonType={BUTTON_TYPE.addTask}
+          />
+        </Link>
         <Select onChange={selectFn} />
         <TodoList />
         <EndOfList />
@@ -25,3 +31,5 @@ export const MainPage = () => {
     </Container>
   )
 }
+
+export default MainPage

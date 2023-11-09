@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 import { LEXICS } from '../../config'
 import { BUTTON_TYPE } from '../../ui/Button/config'
 import { useTodoCreate } from './hooks'
@@ -26,6 +28,7 @@ export const TodoCreate = ({
   } = LEXICS
 
   const {
+    backToMain,
     saveTask,
   } = BUTTON_TYPE
 
@@ -144,6 +147,14 @@ export const TodoCreate = ({
           onClick={openConfirm}
           disabled={isButtonDisabled}
         />
+      </div>
+      <div className={css.todoColumn}>
+        <Link to={'/'}>
+          <Button
+            buttonType={backToMain}
+            onClick={openConfirm}
+          />
+        </Link>
       </div>
     </div>
   )

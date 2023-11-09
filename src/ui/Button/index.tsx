@@ -22,7 +22,6 @@ export const Button = ({
 
   return (
     <div className={css.buttonContainer}>
-
       <button
         className={buttonClass}
         onClick={onClick}

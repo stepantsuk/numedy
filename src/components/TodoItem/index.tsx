@@ -1,10 +1,16 @@
+import { Link } from 'react-router-dom'
+
 import { BUTTON_TYPE } from '../../ui/Button/config'
-import { LEXICS } from '../../config'
+import {
+  LEXICS,
+  PAGES,
+} from '../../config'
 import { useTodoItem } from './hooks'
 import { Button } from '../../ui/Button'
 import css from './TodoItem.module.css'
 
 export type TTodoItem = {
+  id: number,
   description: string,
   dateEnd: Date,
   dateStart: Date,
@@ -12,6 +18,7 @@ export type TTodoItem = {
 }
 
 export const TodoItem = ({
+  id,
   description,
   dateEnd,
   dateStart,
@@ -73,15 +80,16 @@ export const TodoItem = ({
           {description}
         </div>
       </div>
-      <div className={css.buttonFrame}>
-        <Button
-          buttonType={changeTask}
-          onClick={() => console.log(`${changeTask}`)}
-        />
-      </div>
+      <Link to={`${PAGES.edit}/${id}`}>
+        <div className={css.buttonFrame}>
+          <Button
+            buttonType={changeTask}
+            onClick={() => console.log(`${changeTask}`)}
+          />
+        </div>
+      </Link>
       {/* <div className={css.buttonFrame}> */}
       <div className={css.todoRow}>
-
         <Button
           buttonType={deleteTask}
           onClick={() => console.log(`${deleteTask}`)}

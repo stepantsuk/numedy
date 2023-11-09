@@ -16,6 +16,7 @@ export const useButton = ({
 }: TUseButton) => {
   const {
     addTask,
+    backToMain,
     changeTask,
     confirmYes,
     confrimNo,
@@ -36,6 +37,8 @@ export const useButton = ({
     switch (buttonType) {
       case addTask:
         return 'Добавить новую задачу'
+      case backToMain:
+        return 'Вернуться на главную'
       case confirmYes:
         return 'Да'
       case confrimNo:

@@ -1,7 +1,22 @@
-.container {
+/* .container {
   width: 769px;
 
   @media screen and (max-width: 769px) {
     width: 100%;
+  }
+} */
+
+/* .container {
+  @media screen and (max-width: 769px) {
+    overflow-x: hidden;
+  }
+} */
+
+.container {
+  margin: 0 auto;
+  width: 700px;
+
+  @media screen and (max-width: 769px) {
+    width: 90%;
   }
 }
