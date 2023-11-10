@@ -1,4 +1,4 @@
-import { useState } from 'react'
+// import { useState } from 'react'
 
 import map from 'lodash/map'
 
@@ -12,13 +12,15 @@ import css from './Select.module.css'
 
 type TSelect = {
   onChange: (value: string) => void,
+  sortValue: string,
 }
 
 export const Select = (
   {
     onChange,
+    sortValue,
   }: TSelect) => {
-  const [sortValue, setSortValue] = useState('')
+  // const [sortValue, setSortValue] = useState('')
 
   const { sortingLexic } = LEXICS
 
@@ -33,7 +35,6 @@ export const Select = (
         value={sortValue}
         onChange={(e) => {
           onChange(e.target.value)
-          setSortValue(e.target.value)
         }}
       >
         <option disabled value="">

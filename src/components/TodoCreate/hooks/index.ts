@@ -87,8 +87,16 @@ export const useTodoCreate = ({
   const finishEditingTitle = () => {
     const removeAllEmptySpaces = (todoTitle.trim().replace(/[ ]{2,}/g, ' '))
 
-    if (removeAllEmptySpaces !== titleTodo) {
-      setTodoTitle(todoTitle)
+    const ucFirst = (str: string) => {
+      if (!str) return str;
+
+      return str[0].toUpperCase() + str.slice(1).toLowerCase();
+    }
+
+    const formattedStr = ucFirst(removeAllEmptySpaces)
+
+    if (formattedStr !== titleTodo) {
+      setTodoTitle(formattedStr)
     } else {
       setTodoTitle(titleTodo)
     }

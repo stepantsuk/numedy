@@ -4,19 +4,23 @@ import size from 'lodash/size'
 import times from 'lodash/times'
 import slice from 'lodash/slice'
 
- type TUsePagination = {
+type TUsePagination = {
+  activePage: number,
   pageSize: number,
   portionSize: number,
+  setActivePage: React.Dispatch<React.SetStateAction<number>>,
   totalCount: number,
 }
 
 export const usePagination = ({
+  activePage,
   pageSize,
   portionSize,
+  setActivePage,
   totalCount,
 }: TUsePagination) => {
   const [rightBorder, setRightBorder] = useState(portionSize + 1)
-  const [activePage, setActivePage] = useState(1)
+  // const [activePage, setActivePage] = useState(1)
 
   const isActivePage = (page: number) => page === activePage
   const pagesCount = Math.ceil(totalCount / pageSize)

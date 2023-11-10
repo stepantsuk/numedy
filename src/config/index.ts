@@ -1,6 +1,7 @@
-export const MAX_ITEMS = 15
-export const PORTION_SIZE = 3 // количество элементов в динамическом окне пагинатора
+export const MAX_ITEMS = 5
+export const PORTION_SIZE = 5 // количество элементов в динамическом окне пагинатора
 export const DEFAULT_DATE_FORMAT = 'd LLL yyyy'
+export const DEFAULT_ACTIVE_PAGE = 1
 
 
 export enum LEXICS {

@@ -4,7 +4,7 @@ import type { PayloadAction } from '@reduxjs/toolkit'
 import findIndex from 'lodash/findIndex'
 import filter from 'lodash/filter'
 
-import type { RootState } from '../../store'
+// import type { RootState } from '../../store'
 
 export type TTodoItem = {
   description: string,

@@ -14,6 +14,8 @@ import css from './Pagination.module.css'
 export type TPagination = {
   // pageSize: number,
   // portionSize: number,
+  activePage: number,
+  setActivePage: React.Dispatch<React.SetStateAction<number>>,
   setPaginationIndex?: (num: number) => void,
   totalCount: number,
 }
@@ -21,11 +23,13 @@ export type TPagination = {
 export const Pagination = ({
   // pageSize,
   // portionSize,
+  activePage,
+  setActivePage,
   setPaginationIndex,
   totalCount,
 }: TPagination) => {
   const {
-    activePage,
+    // activePage,
     handleActivePage,
     hideFirstAndLast,
     isActivePage,
@@ -37,8 +41,10 @@ export const Pagination = ({
     showLeftDots,
     showRightDots,
   } = usePagination({
+    activePage,
     pageSize: MAX_ITEMS,
     portionSize: PORTION_SIZE,
+    setActivePage,
     totalCount,
   })
 
@@ -49,6 +55,12 @@ export const Pagination = ({
       setPaginationIndex(activePage - 1)
     }
   }, [setPaginationIndex, activePage])
+
+  const showPagination = totalCount > MAX_ITEMS
+
+  if (!showPagination) {
+    return null
+  }
 
   return (
     <div className={css.paginationContainer}>
