@@ -61,12 +61,30 @@
 }
 
 .todoDescription {
+  height: 132px;
   cursor: text;
   padding: 6px 6px;
   border: 1px solid #adb0b2;
   word-wrap: break-word;
   white-space: pre-wrap;
   word-break: break-word;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    position: relative;
+    width: 8px;
+    height: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #cdd1d4;
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #f7f9fa;
+    border-radius: 10px;
+  }
 }
 
 .buttonFrame {

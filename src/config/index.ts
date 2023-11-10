@@ -4,6 +4,10 @@ export const DEFAULT_DATE_FORMAT = 'd LLL yyyy'
 
 
 export enum LEXICS {
+  askAdd = 'Добавить ?',
+  askDelete = 'Удалить ?',
+  askEdit = 'Редактировать ?',
+  askSave = 'Сохранить ?',
   dateTitleStart = 'Дата начала',
   dateTitleEnd = 'Дата окончания',
   descriptionTitle = 'Описание',
@@ -13,7 +17,8 @@ export enum LEXICS {
   enterTitle = 'Введи название',
   enterStart = 'Дата начала',
   footerLexic = 'Тестовое для Нумеди',
-  sortingLexic = 'Сортировка'
+  sortingLexic = 'Сортировка',
+  noTasks = 'Задач пока нет...',
 }
 
 export enum KEYBOARD_KEYS {

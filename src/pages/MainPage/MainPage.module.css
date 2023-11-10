@@ -3,3 +3,7 @@
   flex-direction: column;
   gap: 5px;
 }
+
+.emptyTask {
+  align-self: center;
+}

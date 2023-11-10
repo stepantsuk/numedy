@@ -1,16 +1,26 @@
-export const todos = [
+export const todosMocs = [
   {
     id: 123,
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit eligendi, totam alias rerum suscipit dolores. Illum perspiciatis sapiente quis reiciendis quam, facilis in architecto error, nihil a nam, libero ad!',
-    dateEnd: new Date(),
-    dateStart: new Date(),
+    isDone: false,
+    description: 'test1 123',
+    dateEnd: '2023-11-09',
+    dateStart: '2023-11-09',
     title: 'test1 123',
   },
   {
     id: 456,
-    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit eligendi, totam alias rerum suscipit dolores. Illum perspiciatis sapiente quis reiciendis quam, facilis in architecto error, nihil a nam, libero ad!',
-    dateEnd: new Date(),
-    dateStart: new Date(),
+    isDone: false,
+    description: 'test2 456',
+    dateEnd: '2023-11-09',
+    dateStart: '2023-11-09',
     title: 'test2 456',
+  },
+  {
+    id: 789,
+    isDone: false,
+    description: 'Lorem ipsum dolor 789',
+    dateEnd: '2023-11-09',
+    dateStart: '2023-11-09',
+    title: '789',
   }
 ]

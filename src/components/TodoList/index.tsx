@@ -1,31 +1,28 @@
 import map from 'lodash/map'
 
 // import { Container } from '../Container'
+import type { TTodosState } from '../../slices/todos'
 import { TodoItem } from '../TodoItem'
 
-import { todos } from '../../mocs/todos'
+// import { todos } from '../../mocs/todos'
 
 import css from './TodoList.module.css'
 
-export const TodoList = () => {
+type TTodoList = {
+  todos: TTodosState
+}
+
+export const TodoList = ({
+  todos
+}: TTodoList) => {
   return (
     <div className={css.todoList}>
       {map(
         todos,
-        ({
-          id,
-          dateEnd,
-          dateStart,
-          description,
-          title,
-        }) => (
+        (todo) => (
           <TodoItem
-            id={id}
-            dateEnd={dateEnd}
-            dateStart={dateStart}
-            description={description}
-            title={title}
-            key={id}
+            todo={todo}
+            key={todo.id}
           />
         )
       )}
