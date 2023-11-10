@@ -12,8 +12,6 @@ import { usePagination } from './hooks'
 import css from './Pagination.module.css'
 
 export type TPagination = {
-  // pageSize: number,
-  // portionSize: number,
   activePage: number,
   setActivePage: React.Dispatch<React.SetStateAction<number>>,
   setPaginationIndex?: (num: number) => void,
@@ -21,15 +19,12 @@ export type TPagination = {
 }
 
 export const Pagination = ({
-  // pageSize,
-  // portionSize,
   activePage,
   setActivePage,
   setPaginationIndex,
   totalCount,
 }: TPagination) => {
   const {
-    // activePage,
     handleActivePage,
     hideFirstAndLast,
     isActivePage,

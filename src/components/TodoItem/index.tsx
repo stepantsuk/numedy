@@ -11,8 +11,9 @@ import { useAppDispatch } from '../../store/hooks'
 import { useTodoItem } from './hooks'
 import {
   deleteTodo,
-  setDoneFlag,
+  changeTodo,
 } from '../../slices/todos'
+import { removeLocalStorage } from '../../helpers/localStorage'
 import { Button } from '../../ui/Button'
 import { ConfirmPopup } from '../../ui/ConfirmPopup'
 import css from './TodoItem.module.css'
@@ -57,7 +58,15 @@ export const TodoItem = ({
   const dispatch = useAppDispatch()
 
   const handleDeleteTodo = () => dispatch(deleteTodo(id))
-  const handleSetDone = () => dispatch(setDoneFlag(todo))
+  
+  const handleSetDone = () => dispatch(changeTodo({
+    description,
+    dateEnd,
+    dateStart,
+    id,
+    isDone: !isDone,
+    title,
+  }))
 
   const {
     close: closeEdit,
@@ -78,6 +87,7 @@ export const TodoItem = ({
 
   const hadleConfirmDelete = () => {
     handleDeleteTodo()
+    removeLocalStorage(String(id))
     closeDelete()
   }
 
@@ -143,11 +153,9 @@ export const TodoItem = ({
           />
         </div>
       </Link>
-      {/* <div className={css.buttonFrame}> */}
       <div className={css.todoRow}>
         <Button
           buttonType={deleteTask}
-          // onClick={handleDeleteTodo}
           onClick={openDelete}
         />
       </div>

@@ -1,5 +1,3 @@
-// import { useState } from 'react'
-
 import map from 'lodash/map'
 
 import { LEXICS } from '../../config'
@@ -20,8 +18,6 @@ export const Select = (
     onChange,
     sortValue,
   }: TSelect) => {
-  // const [sortValue, setSortValue] = useState('')
-
   const { sortingLexic } = LEXICS
 
   const optionsArr = Object.keys(SELECT_OPTIONS)

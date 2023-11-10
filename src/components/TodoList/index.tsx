@@ -1,10 +1,7 @@
 import map from 'lodash/map'
 
-// import { Container } from '../Container'
 import type { TTodosState } from '../../slices/todos'
 import { TodoItem } from '../TodoItem'
-
-// import { todos } from '../../mocs/todos'
 
 import css from './TodoList.module.css'
 

@@ -6,12 +6,9 @@ import {
 
 import { useNavigate } from 'react-router-dom'
 
-// import { useDispatch } from 'react-redux'
-
 import size from 'lodash/size'
 import isUndefined from 'lodash/isUndefined'
 
-// import { todosMocs } from '../../../mocs/todos'
 import { useAppDispatch } from '../../../store/hooks'
 import {
   createNewTodo,
@@ -50,6 +47,10 @@ export const useTodoCreate = ({
 
   const onChangeStartDate = (e: BaseSyntheticEvent) => {
     setTodoStartDate(e.target.value)
+
+    if (e.target.value > todoEndDate) {
+      setTodoEndDate(e.target.value)
+    }
   }
 
   const onChangeEndDate = (e: BaseSyntheticEvent) => {
@@ -151,7 +152,6 @@ export const useTodoCreate = ({
 
   return {
     closeConfirm,
-    // endDateTodo: format(endDate, 'yyyy-MM-dd'),
     endDateTodo: todoEndDate,
     finishEditingDescription,
     finishEditingTitle,

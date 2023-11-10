@@ -20,7 +20,6 @@ export const usePagination = ({
   totalCount,
 }: TUsePagination) => {
   const [rightBorder, setRightBorder] = useState(portionSize + 1)
-  // const [activePage, setActivePage] = useState(1)
 
   const isActivePage = (page: number) => page === activePage
   const pagesCount = Math.ceil(totalCount / pageSize)
